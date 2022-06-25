@@ -10,8 +10,8 @@ from sklearn.cluster import KMeans
 
 iris = pd.read_csv("Iris.csv") #Iris.csv dosyasini pandas dataframe'ine aktardim.
 
-x = iris.iloc[:, :-1].values #son sutun degeri haric verileri isledim
-y = iris.iloc[:, -1].values #son sutun degeri verisi
+x = iris.iloc[:, :-1].values
+y = iris.iloc[:, -1].values
 
 x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.2,random_state=0)  #Veri setini egitim ve test kumelerine boldurdum
 classifier   = DecisionTreeClassifier()
